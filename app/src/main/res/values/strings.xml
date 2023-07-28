@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">DHV Business</string>
+    <string name="hint_name">Nombre:</string>
+    <string name="hint_phone">Teléfono:</string>
+    <string name="hint_email">Email:</string>
+
+    <string name="hint_gps">Posición GPS:</string>
+
+
+    <string name="btn_save">Guardar Registro</string>
+    <string name="btn_save_position">Guardar Posición</string>
+    <string name="new_menu">Nuevo Registro</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="fruit_list">
+        <item>Sin descuento</item>
+        <item>5%</item>
+        <item>10%</item>
+        <item>25%</item>
+        <item>50%</item>
+    </string-array>
+
+
+</resources>

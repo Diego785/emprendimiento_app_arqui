@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".controllers.HomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".controllers.deliveries.ShowDeliveryActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.deliveries.DeliveryMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.deliveries.DeliveryMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.deliveries.NewDeliveryActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.deliveries.DeliveryMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.deliveries.DeliveryMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.deliveries.DeliveryMainActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.customers.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.customers.MainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.products.EditProductActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.products.ShowProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.products.ShowProductActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.products.ShowProductActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.products.ProductMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.products.ProductMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.customers.MainActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.customers.NewActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.customers.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.customers.MainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.customers.ShowActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.customers.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.customers.MainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.customers.EditActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.customers.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.customers.MainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.positions.PositionMainActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.positions.NewPositionActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.positions.PositionMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.positions.PositionMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.categories.CategoryMainActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.categories.NewCategoryActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.categories.CategoryMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.categories.CategoryMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.products.ProductMainActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.products.NewProductActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.products.ProductMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.products.ProductMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.products.cotizations.ShowCotizationActivity"
+            android:exported="false"
+            android:parentActivityName=".controllers.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.customers.MainActivity" />
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.testing.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
